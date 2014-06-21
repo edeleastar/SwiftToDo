@@ -12,6 +12,7 @@
 		8F8F1AB3195564AD0071835F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F1AB1195564AD0071835F /* Main.storyboard */; };
 		8F8F1AB5195564AD0071835F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F1AB4195564AD0071835F /* Images.xcassets */; };
 		8F8F1AC1195564AD0071835F /* ToDoListSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F1AC0195564AD0071835F /* ToDoListSwiftTests.swift */; };
+		8F8F1ACB1955F8FE0071835F /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F1ACA1955F8FE0071835F /* ToDoListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		8F8F1ABA195564AD0071835F /* ToDoListSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8F1ABF195564AD0071835F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8F1AC0195564AD0071835F /* ToDoListSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListSwiftTests.swift; sourceTree = "<group>"; };
+		8F8F1ACA1955F8FE0071835F /* ToDoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				8F8F1AB1195564AD0071835F /* Main.storyboard */,
 				8F8F1AB4195564AD0071835F /* Images.xcassets */,
 				8F8F1AAB195564AD0071835F /* Supporting Files */,
+				8F8F1ACA1955F8FE0071835F /* ToDoListController.swift */,
 			);
 			path = ToDoListSwift;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8F1ACB1955F8FE0071835F /* ToDoListController.swift in Sources */,
 				8F8F1AB0195564AD0071835F /* ViewController.swift in Sources */,
 				8F8F1AAE195564AD0071835F /* AppDelegate.swift in Sources */,
 			);
