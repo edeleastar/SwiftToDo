@@ -29,6 +29,7 @@ class ToDoListController: UITableViewController
       {
         println ("adding" + toDo.itemName + " to list")
         todoItems.append(toDo)
+        self.tableView.reloadData()
       }
     }
   }
@@ -42,11 +43,22 @@ class ToDoListController: UITableViewController
 
   override func numberOfSectionsInTableView(tableView: UITableView?) -> Int
   {
-    return 0
+    return 1
   }
 
   override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int
   {
-    return 0
+    return todoItems.count
+  }
+  
+  override func tableView(tableView: UITableView?, cellForRowAtIndexPath : NSIndexPath!) -> UITableViewCell?
+  {
+    let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ToDoCell")
+    var task           = todoItems[cellForRowAtIndexPath.row]
+    
+    cell.text          = task.itemName
+    cell.accessoryType = task.completed ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
+    
+    return cell
   }
 }
