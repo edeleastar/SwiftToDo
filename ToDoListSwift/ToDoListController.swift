@@ -3,6 +3,8 @@ import UIKit
 //@objc(ToDoListController)
 class ToDoListController: UITableViewController
 {
+  var todoItems = ToDoItem[]()
+
   init(style: UITableViewStyle)
   {
     super.init(style: style)
@@ -21,7 +23,14 @@ class ToDoListController: UITableViewController
   
   @IBAction func unwindToList (segue: UIStoryboardSegue?)
   {
-    println ("seague unwound")
+    if let controller = segue?.sourceViewController as? ViewController
+    {
+      if let toDo = controller.todo
+      {
+        println ("adding" + toDo.itemName + " to list")
+        todoItems.append(toDo)
+      }
+    }
   }
   
   override func didReceiveMemoryWarning()
