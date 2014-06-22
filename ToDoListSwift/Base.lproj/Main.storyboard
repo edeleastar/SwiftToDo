@@ -28,7 +28,7 @@
                     <navigationItem key="navigationItem" title="To-do List" id="9w1-Ex-12G">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="8YW-dG-Oo0">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="push" id="242-Te-Ehp"/>
+                                <segue destination="kDD-MQ-wqS" kind="modal" id="242-Te-Ehp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -54,14 +54,43 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nlF-gh-oGi"/>
+                    <navigationItem key="navigationItem" id="nlF-gh-oGi">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="uZk-Bi-awF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aHE-9B-SLw">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dco-Sd-UlC" kind="unwind" unwindAction="unwindToList:" id="YXI-g6-QJf"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ur2-Bj-UPr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sE4-ni-U97">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dco-Sd-UlC" kind="unwind" unwindAction="unwindToList:" id="HKt-Nf-o5n"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="dco-Sd-UlC" kind="unwind" unwindAction="unwindToList:" id="aFM-3d-4BX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="toDoItem" destination="gvT-8U-hgj" id="UTd-xR-Unm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="dco-Sd-UlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="158"/>
+            <point key="canvasLocation" x="1620" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YNN-gH-qz5">
@@ -80,6 +109,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecU-zf-eg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WE8-kF-IGp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDD-MQ-wqS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zAM-IA-cUH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LtU-6Z-i3D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bLE-bU-fah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAt-44-nKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="158"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
