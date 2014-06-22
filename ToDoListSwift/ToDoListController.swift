@@ -18,8 +18,12 @@ class ToDoListController: UITableViewController
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    navigationItem.leftBarButtonItem = self.editButtonItem()
+    todoItems.append(ToDoItem(itemName:"Buy Milk",    completed:false))
+    todoItems.append(ToDoItem(itemName:"Buy eggs",    completed:true))
+    todoItems.append(ToDoItem(itemName:"Read a book", completed:false))
     println ("Tableview Loaded")
-   }
+  }
   
   @IBAction func unwindToList (segue: UIStoryboardSegue?)
   {
@@ -60,5 +64,37 @@ class ToDoListController: UITableViewController
     cell.accessoryType = task.completed ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
     
     return cell
+  }
+  
+  override func tableView(tableView: UITableView!, didSelectRowAtIndexPath : NSIndexPath!)
+  {
+    tableView.deselectRowAtIndexPath(didSelectRowAtIndexPath, animated: false)
+    var task = self.todoItems[didSelectRowAtIndexPath.row] as ToDoItem
+    task.completed = !task.completed
+    tableView.reloadRowsAtIndexPaths([didSelectRowAtIndexPath], withRowAnimation: UITableViewRowAnimation.None)
+  }
+  
+  override func tableView(tableView: UITableView?, commitEditingStyle: UITableViewCellEditingStyle, forRowAtIndexPath: NSIndexPath?)
+  {
+    if commitEditingStyle == .Delete
+    {
+      if let index = forRowAtIndexPath?.row
+      {
+        todoItems.removeAtIndex(index)
+        tableView?.deleteRowsAtIndexPaths([forRowAtIndexPath!], withRowAnimation: .Fade)
+      }
+    }
+    else if commitEditingStyle == .Insert
+    {
+    }
+  }
+  
+  override func tableView(tableView: UITableView?, moveRowAtIndexPath : NSIndexPath?, toIndexPath: NSIndexPath?)
+  {
+  }
+  
+  override func tableView(tableView: UITableView?, canMoveRowAtIndexPath : NSIndexPath?) -> Bool
+  {
+    return true
   }
 }
