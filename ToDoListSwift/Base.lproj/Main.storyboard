@@ -84,13 +84,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancel" destination="aHE-9B-SLw" id="wIx-t2-hYp"/>
+                        <outlet property="done" destination="sE4-ni-U97" id="gru-Fe-MwA"/>
                         <outlet property="toDoItem" destination="gvT-8U-hgj" id="UTd-xR-Unm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="dco-Sd-UlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="158"/>
+            <point key="canvasLocation" x="1545" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YNN-gH-qz5">

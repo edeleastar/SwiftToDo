@@ -2,18 +2,23 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate
 {
-  @IBOutlet var toDoItem: UITextField
+  @IBOutlet var toDoItem : UITextField
+  @IBOutlet var cancel   : UIButton
+  @IBOutlet var done     : UIButton
+  var todo               : ToDoItem?
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    toDoItem.delegate = self
   }
   
-  func textFieldShouldReturn(textField: UITextField!) -> Bool
+  override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
   {
-    println(toDoItem.text)
-    return true
+    if let button = sender as? NSObject
+    {
+      todo = button == done ? ToDoItem(itemName:toDoItem.text): nil
+      println(todo?.itemName)
+    }
   }
   
   override func didReceiveMemoryWarning()

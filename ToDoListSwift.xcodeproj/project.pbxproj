@@ -13,6 +13,7 @@
 		8F8F1AB5195564AD0071835F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F1AB4195564AD0071835F /* Images.xcassets */; };
 		8F8F1AC1195564AD0071835F /* ToDoListSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F1AC0195564AD0071835F /* ToDoListSwiftTests.swift */; };
 		8F8F1ACB1955F8FE0071835F /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F1ACA1955F8FE0071835F /* ToDoListController.swift */; };
+		8F8F1ACF1956BCC50071835F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F1ACE1956BCC50071835F /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		8F8F1AC0195564AD0071835F /* ToDoListSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListSwiftTests.swift; sourceTree = "<group>"; };
 		8F8F1ACA1955F8FE0071835F /* ToDoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
 		8F8F1ACD1956AD7F0071835F /* ToDoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListController.h; sourceTree = "<group>"; };
+		8F8F1ACE1956BCC50071835F /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		8F8F1AAA195564AD0071835F /* ToDoListSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8F8F1ACE1956BCC50071835F /* ToDoItem.swift */,
 				8F8F1ACD1956AD7F0071835F /* ToDoListController.h */,
 				8F8F1AAD195564AD0071835F /* AppDelegate.swift */,
 				8F8F1AAF195564AD0071835F /* ViewController.swift */,
@@ -215,6 +218,7 @@
 			files = (
 				8F8F1ACB1955F8FE0071835F /* ToDoListController.swift in Sources */,
 				8F8F1AB0195564AD0071835F /* ViewController.swift in Sources */,
+				8F8F1ACF1956BCC50071835F /* ToDoItem.swift in Sources */,
 				8F8F1AAE195564AD0071835F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
