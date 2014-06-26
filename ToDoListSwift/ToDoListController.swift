@@ -3,8 +3,11 @@ import UIKit
 //@objc(ToDoListController)
 class ToDoListController: UITableViewController
 {
-  var todoItems = ToDoItem[]()
-
+  var todoItems = [ToDoItem(itemName:"Buy Milk",    completed:false),
+                   ToDoItem(itemName:"Buy eggs",    completed:true),
+                   ToDoItem(itemName:"Learn Swift", completed:true),
+                   ToDoItem(itemName:"Read a book", completed:false)]
+  
   init(style: UITableViewStyle)
   {
     super.init(style: style)
@@ -19,9 +22,6 @@ class ToDoListController: UITableViewController
   {
     super.viewDidLoad()
     navigationItem.leftBarButtonItem = self.editButtonItem()
-    todoItems.append(ToDoItem(itemName:"Buy Milk",    completed:false))
-    todoItems.append(ToDoItem(itemName:"Buy eggs",    completed:true))
-    todoItems.append(ToDoItem(itemName:"Read a book", completed:false))
     println ("Tableview Loaded")
   }
   
